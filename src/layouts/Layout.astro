@@ -1,22 +1,66 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+---
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
+	<BaseHead title="Frontend Mentor | Results summary component" />
 	<body>
 		<slot />
 	</body>
 </html>
 
 <style>
+	@font-face {
+		font-family: "Hanken Grotesk", sans-serif;
+		src: url('../assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+	}
+	@font-face {
+		font-family: "Hanken Grotesk", sans-serif;
+		src: url('../assets/fonts/static/HankenGrotesk-Bold.ttf');
+		font-weight: 700;
+	}
+	@font-face {
+		font-family: "Hanken Grotesk", sans-serif;
+		src: url('../assets/fonts/static/HankenGrotesk-ExtraBold.ttf');
+		font-weight: 800;
+	}
+	@font-face {
+		font-family: "Hanken Grotesk", sans-serif;
+		src: url('../assets/fonts/static/HankenGrotesk-Medium.ttf');
+		font-weight: 500;
+	}
+
+	* {
+		box-sizing: border-box;
+		padding: 0; margin: 0;
+	}
+	:root {
+		--clr-navy-950: #303B59;
+		--clr-navy-200: #CAC9FF;
+		--clr-navy-50: #ECF2FF;
+		--clr-blue-800: #1125D6;
+		--clr-blue-50: #F3F4FD;
+		--clr-yellow-400: #FFB21E;
+		--clr-yellow-50: #FFFBF4;
+		--clr-red-400: #FF5555;
+		--clr-red-50: #FFF6F6;
+		--clr-green-500: #00BB8F;
+		--clr-green-50: #F2FCF9;
+		--gradient-one: linear-gradient(to bottom, #4D21C9, #2521C9);
+		--gradient-two: linear-gradient(to bottom, #7755FF, #2F2CE9);
+	}
+
 	html,
 	body {
-		margin: 0;
+		font-family: "Hanken Grotesk", sans-serif;
 		width: 100%;
-		height: 100%;
+		min-height: 100vh;
+
+		background-color: var(--clr-blue-50);
+	}
+	@media screen and (min-width: 768px) {
+		body {
+			align-content: center;
+		}
 	}
 </style>

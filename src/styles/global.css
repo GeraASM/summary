@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {  
+    --color-navy-200: #CAC9FF; 
+    --color-navy-950: #303B59;
+    --color-red-400: #FF5555;
+    --color-yellow-400: #FFB21E;
+    --color-green-500: #00BB8F;
+    --color-blue-800: #1125D6;
+    --color-red-50: #FFF6F6;
+    --color-yellow-50: #FFFBF4;
+    --color-green-50: #F2FCF9;
+    --color-blue-50: #F3F4FD;
+}
+:root {
+    --clr-navy-950: #303B59;
+    --clr-navy-200: #CAC9FF;
+    --clr-navy-50: #ECF2FF;
+    --clr-blue-800: #1125D6;
+    --clr-blue-50: #F3F4FD;
+    --clr-yellow-400: #FFB21E;
+    --clr-yellow-50: #FFFBF4;
+    --clr-red-400: #FF5555;
+    --clr-red-50: #FFF6F6;
+    --clr-green-500: #00BB8F;
+    --clr-green-50: #F2FCF9;
+    --gradient-one: linear-gradient(to bottom, #4D21C9, #2521C9);
+    --gradient-two: linear-gradient(to bottom, #7755FF, #2F2CE9);
+}
+
+.summary {
+    background-image: linear-gradient(to bottom, #7755FF, #2F2CE9);
+}
+
+.summary__circle {
+    background-image: linear-gradient(to top, #7755FF, #2521C9);
+}
+
+.summary__detail {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    border-radius: 12px;
+    padding: 0 16px;
+    line-height: 1.3;
+}
+
+.summary__name {
+    font-weight: 500;
+    margin-left: 16px;
+}
+
+.summary__score {
+    margin-left: auto;
+    font-weight: bold;
+    color: #303B59;
+}
+
+.summary__bold {
+    color: var(--clr-navy-950);
+}
+
+.summary__slash {
+    margin: 0 8px;
+    opacity: 0.5;
+}
+
+.summary__max {
+    opacity: 0.5;
+}
+
+.summary__btncontinue:hover {
+    background-image: var(--gradient-two);
+}
